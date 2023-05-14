@@ -11,6 +11,6 @@ results = soup.find(id="ResultsContainer")
 titles = soup.find_all('a', class_='_3ryJoIoycVkA88fy40qNJc')
 
 with open('reddit.txt', 'w') as file:
-    file.write(title)
+    file.write(title + '\n')
     for title in titles:
         file.write(str(title.get("href")) + '\n')
